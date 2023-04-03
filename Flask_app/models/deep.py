@@ -10,6 +10,9 @@ class Killer:
 		self.Add_ons = Add_ons
 	
 	def GetKillerPerks(killer_num ,perk_num):
-		print(data["Players"]["Killers"][killer_num]["Perks"][perk_num])
-		return data["Players"]["Killers"]["0"]["Perk_Description"][perk_num]
-		return data["Players"]["Killers"][killer_num]["Perks"][perk_num]
+		m = []
+		for perk in data["Players"]["Killers"][killer_num]["Perks"][perk_num]:
+			m.append(perk)
+		print(m)
+		return m
+		# return data["Players"]["Killers"]["0"]["Perk_Description"][perk_num]
