@@ -9,11 +9,14 @@ class Killer:
 		self.Perk_description = Perk_Description
 		self.Add_ons = Add_ons
 	
-	def GetKillerPerks(killer_num):
+	def GetKillerPerks(killer_num, perk_num):
 		m = []
-		perk = data["Players"]["Killers"][killer_num]["Perks"]
+		perk = data["Players"]["Killers"][killer_num]["Perks"][perk_num]
 		# if perk in data["Players"]["Killers"][killer_num]["Perks"]:
-		m += perk
-		print(m[0])
+		m = perk
+		print(m)
 		return m
 		# return data["Players"]["Killers"]["0"]["Perk_Description"][perk_num]
+	def GetKillerPerkDesc(killer_num, perk_num):
+		a = []
+		

@@ -17,5 +17,5 @@ def all_info():
 @app.route('/random_killer')
 def killer_random():
 	x = random.randint(0, 32)
-	m = Killer.GetKillerPerks(f"{x}")
+	m = Killer.GetKillerPerks(f"{x}", 0)
 	return render_template('data.html', m = m)
