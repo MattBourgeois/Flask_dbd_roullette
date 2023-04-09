@@ -14,9 +14,12 @@ class Killer:
 		perk = data["Players"]["Killers"][killer_num]["Perks"][perk_num]
 		# if perk in data["Players"]["Killers"][killer_num]["Perks"]:
 		m = perk
-		print(m)
+		# print(m)
 		return m
 		# return data["Players"]["Killers"]["0"]["Perk_Description"][perk_num]
 	def GetKillerPerkDesc(killer_num, perk_num):
 		a = []
-		
+		# desc = 
+		print (data["Players"]["Killers"][killer_num]["Perks"]["Perk_Description"][0])
+		print(desc)
+		return desc

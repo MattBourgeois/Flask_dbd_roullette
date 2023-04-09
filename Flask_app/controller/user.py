@@ -18,4 +18,5 @@ def all_info():
 def killer_random():
 	x = random.randint(0, 32)
 	m = Killer.GetKillerPerks(f"{x}", 0)
-	return render_template('data.html', m = m)
+	a = Killer.GetKillerPerkDesc(f"{x}", 0)
+	return render_template('data.html', m = m, a = a)
