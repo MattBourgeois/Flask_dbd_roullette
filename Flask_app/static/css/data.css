@@ -1,0 +1,15 @@
+*{
+	padding: 0;
+	margin: auto;
+}
+#content{
+	width: 600px;
+}
+#perks{
+	display: flex;
+	flex-direction: column;
+}
+h4{
+	color: black;
+	font: bold;
+}
