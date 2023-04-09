@@ -16,7 +16,6 @@ class Killer:
 		return m
 	def GetKillerPerkDesc(killer_num, perk_num):
 		a = []
-		print(perk_num)
 		perks = (data["Players"]["Killers"][killer_num]["Perk_Descriptions"][perk_num])
 		a = perks
 		return a

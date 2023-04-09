@@ -17,6 +17,7 @@ def all_info():
 @app.route('/random_killer')
 def killer_random():
 	x = random.randint(0, 32)
-	m = Killer.GetKillerPerks(f"{x}", 0)
-	a = Killer.GetKillerPerkDesc(f"{x}", 0)
+	m = Killer.GetKillerPerks(f"{x}", 1) 
+	# both m and a are only printing the first descriptions not the 2nd or 3rd.
+	a = Killer.GetKillerPerkDesc(f"{x}", 1)
 	return render_template('data.html', m = m, a = a)
