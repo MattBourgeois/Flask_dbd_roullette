@@ -30,4 +30,5 @@ class Survivor:
 		m = []
 		perk = data["Players"][Surv_num]["Perks"][perk_num]
 		m = perk
+		print(m)
 		return m
