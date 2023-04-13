@@ -26,4 +26,4 @@ def killer_random():
 def Surv_random():
 	x = random.randint(0, 36)
 	m = Survivor.GetSurvivorPerks(f"{x}", 0)
-	return render_template('Sur.html')
+	return render_template('Sur.html', m = m)
