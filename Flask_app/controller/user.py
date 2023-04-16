@@ -24,10 +24,13 @@ def killer_random():
 
 @app.route('/random_surv')
 def Surv_random():
+	c = []
 	for i in range(1, 5, 1):
 		x = random.randint(0, 36)
 		m = Survivor.GetSurvivorPerks(f"{x}", 0)
 		a = Survivor.GetSurvivorDesc(f"{x}", 0)
-	q = [m, a]
-	return render_template('Sur.html', m = m, a = a)
+		c.append(m)
+		c.append(a)
+	
+	return render_template('Sur.html', m = m, a = a, c=c)
 
