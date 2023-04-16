@@ -30,12 +30,10 @@ class Survivor:
 		m = []
 		perk = data["Players"]["Survivors"][Surv_num]["Perks"][perk_num]
 		m = perk
-		print(m)
 		return m
 
 	def GetSurvivorDesc(Surv_num, perk_num):
 		a = []
 		perks = data["Players"]["Survivors"][Surv_num]["Perk_Descriptions"][perk_num]
 		a = perks
-		print(a)
 		return a
