@@ -28,5 +28,6 @@ def Surv_random():
 		x = random.randint(0, 36)
 		m = Survivor.GetSurvivorPerks(f"{x}", 0)
 		a = Survivor.GetSurvivorDesc(f"{x}", 0)
+	q = [m, a]
 	return render_template('Sur.html', m = m, a = a)
 
