@@ -18,7 +18,6 @@ def all_info():
 def killer_random():
 	x = random.randint(0, 32)
 	m = Killer.GetKillerPerks(f"{x}", 1) 
-	# both m and a are only printing the first descriptions not the 2nd or 3rd.
 	a = Killer.GetKillerPerkDesc(f"{x}", 1)
 	return render_template('data.html', m = m, a = a)
 
@@ -27,10 +26,8 @@ def Surv_random():
 	c = []
 	for i in range(1, 5, 1):
 		x = random.randint(0, 36)
-		m = Survivor.GetSurvivorPerks(f"{x}", 0)
 		a = Survivor.GetSurvivorDesc(f"{x}", 0)
-		c.append(m)
-		c.append(a)
-	
-	return render_template('Sur.html', m = m, a = a, c=c)
+		c.append(Survivor.GetSurvivorPerks(f"{x}", 0))
+		c.append(Survivor.GetSurvivorDesc(f"{x}", 0))
+	return render_template('Sur.html', a = a, c=c)
 
