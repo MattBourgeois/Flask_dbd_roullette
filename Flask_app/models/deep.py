@@ -1,4 +1,4 @@
-import json
+import json, random
 with open("data2.json", "r") as d:
 	data = json.load(d)
 
@@ -37,4 +37,5 @@ class Survivor:
 		a = []
 		perks = data["Players"]["Survivors"][Surv_num]["Perk_Descriptions"][perk_num]
 		a = perks
+		print(a)
 		return a
