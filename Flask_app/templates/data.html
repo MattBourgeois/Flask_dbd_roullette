@@ -9,8 +9,11 @@
 <body>
 	<div id="content">
 		<div id="perks">
-			<h4> {{m}}</h4> 
-			<br><h2>Perk Description:</h2><p> {{a}} </p>
+			{% for c in c %}
+				<p>
+					{{c}}
+				</p>
+			{% endfor %}
 		</div>
 	</div>
 </body>
