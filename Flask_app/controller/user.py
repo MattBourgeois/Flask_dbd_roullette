@@ -16,10 +16,13 @@ def all_info():
 
 @app.route('/random_killer')
 def killer_random():
-	x = random.randint(0, 32)
-	m = Killer.GetKillerPerks(f"{x}", 1) 
-	a = Killer.GetKillerPerkDesc(f"{x}", 1)
-	return render_template('data.html', m = m, a = a)
+	c = []
+	for i in range(1, 5, 1):
+		x = random.randint(0, 32)
+		a = Killer.GetKillerPerkDesc(f"{x}", 0)
+		c.append(Killer.GetKillerPerks(f"{x}", 0))
+		c.append(Killer.GetKillerPerkDesc(f"{x}", 0))
+	return render_template('data.html', a = a, c=c)
 
 @app.route('/random_surv')
 def Surv_random():
