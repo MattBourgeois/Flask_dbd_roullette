@@ -10,6 +10,10 @@ with open("data2.json", "r") as d:
 def index():
 	return render_template('index.html')
 
+@app.route('/home')
+def home():
+	return render_template('index.html')
+
 @app.route('/data')
 def all_info():
 	return data["Players"]

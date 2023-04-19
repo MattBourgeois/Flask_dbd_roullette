@@ -4,6 +4,13 @@
 }
 #content{
 	width: 600px;
+	background-color: white;
+	padding: 15px;
+	display: flex;
+}
+nav{
+	padding-left: 10px;
+	padding-top: 10px;
 }
 #perks{
 	display: flex;
@@ -12,4 +19,8 @@
 h4{
 	color: black;
 	font: bold;
+}
+
+body:not(h1){
+	background-color: black;
 }
