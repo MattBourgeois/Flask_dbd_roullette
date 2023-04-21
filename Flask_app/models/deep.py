@@ -31,7 +31,6 @@ class Survivor:
 		perk = data["Players"]["Survivors"][Surv_num]["Perks"][perk_num]
 		m = perk
 		return m
-
 	def GetSurvivorDesc(Surv_num, perk_num):
 		a = []
 		perks = data["Players"]["Survivors"][Surv_num]["Perk_Descriptions"][perk_num]
