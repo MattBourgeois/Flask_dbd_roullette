@@ -14,6 +14,10 @@ def index():
 def home():
 	return render_template('index.html')
 
+@app.route('/Reset')
+def reset():
+	session.clear()
+
 @app.route('/data')
 def all_info():
 	return data["Players"]
