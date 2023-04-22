@@ -17,6 +17,7 @@ def home():
 @app.route('/Reset')
 def reset():
 	session.clear()
+# we are going to clear the request.
 
 @app.route('/data')
 def all_info():
