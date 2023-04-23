@@ -14,10 +14,6 @@ def index():
 def home():
 	return render_template('index.html')
 
-@app.route('/Reset')
-def reset():
-	session.clear()
-# we are going to clear the request.
 
 @app.route('/data')
 def all_info():
