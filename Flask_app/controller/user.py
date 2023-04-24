@@ -21,21 +21,19 @@ def all_info():
 
 @app.route('/random_killer')
 def killer_random():
-	c = []
+	Perk_list = []
 	for i in range(1, 5, 1):
-		x = random.randint(0, 32)
-		a = Killer.GetKillerPerkDesc(f"{x}", 0)
-		c.append(Killer.GetKillerPerks(f"{x}", 0))
-		c.append(Killer.GetKillerPerkDesc(f"{x}", 0))
-	return render_template('data.html', a = a, c=c)
+		random_num = random.randint(0, 32)
+		Perk_list.append(Killer.GetKillerPerks(f"{random_num}", 0))
+		Perk_list.append(Killer.GetKillerPerkDesc(f"{random_num}", 0))
+	return render_template('data.html', Perk_list=Perk_list)
 
 @app.route('/random_surv')
 def Surv_random():
-	c = []
+	Perk_list = []
 	for i in range(1, 5, 1):
-		x = random.randint(0, 36)
-		a = Survivor.GetSurvivorDesc(f"{x}", 0)
-		c.append(Survivor.GetSurvivorPerks(f"{x}", 0))
-		c.append(Survivor.GetSurvivorDesc(f"{x}", 0))
-	return render_template('Sur.html', a = a, c=c)
+		random_num = random.randint(0, 36)
+		Perk_list.append(Survivor.GetSurvivorPerks(f"{random_num}", 0))
+		Perk_list.append(Survivor.GetSurvivorDesc(f"{random_num}", 0))
+	return render_template('Sur.html', Perk_list=Perk_list)
 
