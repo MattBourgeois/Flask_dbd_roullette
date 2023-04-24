@@ -10,15 +10,15 @@ class Killer:
 		self.Add_ons = Add_ons
 	
 	def GetKillerPerks(killer_num, perk_num):
-		m = []
-		perk = data["Players"]["Killers"][killer_num]["Perks"][perk_num]
-		m = perk
-		return m
+		Killer_perks_list = []
+		Killer_perk = data["Players"]["Killers"][killer_num]["Perks"][perk_num]
+		Killer_perks_list = Killer_perk
+		return Killer_perks_list
 	def GetKillerPerkDesc(killer_num, perk_num):
-		a = []
-		perks = data["Players"]["Killers"][killer_num]["Perk_Descriptions"][perk_num]
-		a = perks
-		return a
+		Killer_perkdesc_list = []
+		Killer_perksdesc = data["Players"]["Killers"][killer_num]["Perk_Descriptions"][perk_num]
+		Killer_perkdesc_list = Killer_perksdesc
+		return Killer_perkdesc_list
 
 class Survivor:
 	def __init__(self, Name, Perks, Perk_Descriptions):
@@ -27,12 +27,12 @@ class Survivor:
 		self.Perk_Description = Perk_Descriptions
 
 	def GetSurvivorPerks(Surv_num, perk_num):
-		m = []
-		perk = data["Players"]["Survivors"][Surv_num]["Perks"][perk_num]
-		m = perk
-		return m
+		Survivor_perk_list = []
+		Survivor_perk = data["Players"]["Survivors"][Surv_num]["Perks"][perk_num]
+		Survivor_perk_list = Survivor_perk
+		return Survivor_perk_list
 	def GetSurvivorDesc(Surv_num, perk_num):
-		a = []
-		perks = data["Players"]["Survivors"][Surv_num]["Perk_Descriptions"][perk_num]
-		a = perks
-		return a
+		Survior_perkdesc_list = []
+		Survivor_perksdesc = data["Players"]["Survivors"][Surv_num]["Perk_Descriptions"][perk_num]
+		Survior_perkdesc_list = Survivor_perksdesc
+		return Survior_perkdesc_list
