@@ -14,7 +14,6 @@ def index():
 def home():
 	return render_template('index.html')
 
-
 @app.route('/data')
 def all_info():
 	return data["Players"]
