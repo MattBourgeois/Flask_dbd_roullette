@@ -3,18 +3,32 @@
 	padding: 0;
 	border: 1px solid red;
 }
+body{
+	background-color: black;
+}
 a{
 	background-color: gold;
 	color: royalblue;
 	padding: 15px 15px;
 	text-decoration: none;
+	border-radius: 25%;
 }
 #button, button{
 	display: flex;
 	margin-top: 25px;
 }
+#data_button{
+	display: flex;
+	margin-top: 25px;
+	position: fixed;
+	bottom: 25%;
+	width: 100%;
+	left: 0%;
+	/* right: 50%; */
+	text-align: center;
+}
 footer{
-	color: black;
+	color: white;
 	position: fixed;
 	left: 0%;
 	bottom: 0%;
