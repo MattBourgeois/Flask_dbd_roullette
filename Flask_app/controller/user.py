@@ -1,7 +1,10 @@
 from Flask_app import app
 from flask import render_template, request, redirect
 from Flask_app.models.deep import Killer, Survivor
-import json, random
+import json, random, os
+
+pictures_dir = os.path.join(app.static_folder, 'pictures')
+picture_filenames = os.listdir(pictures_dir)
 
 with open("data2.json", "r") as d:
 	data = json.load(d)
@@ -12,7 +15,9 @@ def index():
 
 @app.route('/home')
 def home():
-	return render_template('index.html')
+	pictures_dir = os.path.join(app.static_folder, 'pictures')
+	picture_filenames = os.listdir(pictures_dir)
+	return render_template('index.html', picture_filenames=picture_filenames)
 
 @app.route('/data')
 def all_info():
@@ -35,4 +40,3 @@ def Surv_random():
 		Perk_list.append(Survivor.GetSurvivorPerks(f"{random_num}", 0))
 		Perk_list.append(Survivor.GetSurvivorDesc(f"{random_num}", 0))
 	return render_template('Sur.html', Perk_list=Perk_list)
-
