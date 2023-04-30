@@ -1,6 +1,7 @@
 *{
 	margin: auto;
 	padding: 0;
+	border: 1px solid red;
 }
 a{
 	background-color: gold;
@@ -11,4 +12,12 @@ a{
 #button, button{
 	display: flex;
 	margin-top: 25px;
+}
+footer{
+	color: black;
+	position: fixed;
+	left: 0%;
+	bottom: 0%;
+	width: 100%;
+	text-align: center;
 }
