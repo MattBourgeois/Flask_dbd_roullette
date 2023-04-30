@@ -18,7 +18,12 @@
 	</main>
 	<div id="pictures">
 		<div id="pictures">
-			<img class="Perk_pics" src="{{url_for('static', filename='Perk_images/IconPerks_aceinTheHole.png')}}" />
+			{% block content %}
+			<h1>Pictures</h1>
+				{% for filename in picture_filenames %}
+			<img class="Perk_pics" src="{{ url_for('static', filename='pictures/' + filename) }}" alt="{{ filename }}">
+				{% endfor %}
+			{% endblock %}
 		</div>
 	</div>
 	<footer>
