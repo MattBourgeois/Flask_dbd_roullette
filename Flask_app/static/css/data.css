@@ -1,6 +1,7 @@
 *{
 	padding: 0;
 	margin: auto;
+	border: 1px solid red;
 }
 #content{
 	width: 600px;
@@ -9,8 +10,8 @@
 	display: flex;
 }
 nav{
-	padding-left: 10px;
-	padding-top: 10px;
+	padding: 10px;
+	/* padding-top: 10px; */
 }
 #perks{
 	display: flex;
@@ -20,7 +21,14 @@ h4{
 	color: black;
 	font: bold;
 }
-
 body:not(h1){
 	background-color: black;
+}
+footer{
+	color: white;
+	position: fixed;
+	left: 0%;
+	bottom: 0%;
+	width: 100%;
+	text-align: center;
 }
