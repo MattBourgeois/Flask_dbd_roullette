@@ -9,7 +9,6 @@
 </head>
 <body>
 	<div id="button">
-		<a href="/pictures">presssss</a>
 		<a href="/random_killer" id="killer_perk">Random Killer Perks</a>
 		<a href="/random_surv">Random Survivor Perk</a>
 	</div>
@@ -17,17 +16,19 @@
 		<a href="/data">Show me the DATA!!!</a>
 	</main>
 	<div id="pictures">
-		<div id="pictures">
-			{% block content %}
-			<h1>Pictures</h1>
-				{% for filename in picture_filenames %}
-			<img class="Perk_pics" src="{{ url_for('static', filename='pictures/' + filename) }}" alt="{{ filename }}">
-				{% endfor %}
-			{% endblock %}
-		</div>
+		{% block content %}
+			{% for filename in picture_filenames %}
+		<img onclick="page()" class="Perk_pics" src="{{ url_for('static', filename='pictures/' + filename) }}" alt="{{ filename }}">
+			{% endfor %}
+		{% endblock %}
 	</div>
 	<footer>
 		<p>Created by Matthew Bourgeois</p>
 	</footer>
+	<script>
+		function page(){
+			alert("perk description")
+		}
+	</script>
 </body>
 </html>

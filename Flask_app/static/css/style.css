@@ -16,12 +16,13 @@ a{
 #button, button{
 	display: flex;
 	margin-top: 25px;
+	padding: 10px;
 }
 #data_button{
 	display: flex;
 	margin-top: 25px;
 	position: fixed;
-	bottom: 25%;
+	bottom: 5%;
 	width: 100%;
 	left: 0%;
 	/* right: 50%; */
@@ -35,7 +36,11 @@ footer{
 	width: 100%;
 	text-align: center;
 }
+#pictures{
+	display: flexbox;
+
+	padding: 10px;
+}
 .Perk_pics{
-	width: 45px;
 	height: 45px;
 }
